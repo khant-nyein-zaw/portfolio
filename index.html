@@ -5,37 +5,7 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>My Portfolio</title>
-	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-		* {
-			font-family: 'Poppins', sans-serif;
-			scroll-padding-top: 4rem;
-		}
-
-		::-webkit-scrollbar {
-			width: 15px;
-			background-color: #ffffff;
-		}
-
-		::-webkit-scrollbar-thumb {
-			border-radius: 20px;
-			background-color: #232323;
-		}
-
-		::-webkit-scrollbar-thumb:hover {
-			background-color: #383232;
-		}
-
-		.body-dark {
-			background-color: #18171a;
-		}
-
-		.text-color {
-			color: #232323;
-		}
-	</style>
+	<title>KNZ's portfolio</title>
 	<!-- fontawesome link -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
 		integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
@@ -43,6 +13,14 @@
 	<!-- bootstrap link -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
 		integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+	<!-- animate css link -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+		integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- animate on scroll link -->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<!-- CSS link -->
+	<link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
@@ -50,7 +28,7 @@
 	<!-- Navbar start -->
 	<nav class="navbar navbar-expand-lg bg-light sticky-top">
 		<div class="container">
-			<a class="navbar-brand text-warning" href="#"><i class='fa-solid fa-user me-2'></i> Portfolio</a>
+			<a class="navbar-brand primary-color" href="#"><i class="fa-solid fa-code"></i> Portfolio</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
 				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -61,13 +39,13 @@
 						<a class="nav-link active text-color" aria-current="page" href="#home">Home</a>
 					</li>
 					<li class="nav-item">
+						<a class="nav-link text-color" href="#about">About</a>
+					</li>
+					<li class="nav-item">
 						<a class="nav-link text-color" href="#services">Services</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link text-color" href="#portfolio">Portfolio</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link text-color" href="#partner">Partner</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link text-color" href="#contact">Contact</a>
@@ -83,12 +61,12 @@
 						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link text-color" href="#">
+						<a class="nav-link text-color" href="https://www.linkedin.com/in/khant-nyein-zaw-459960258/">
 							<i class="fa-brands fa-linkedin"></i>
 						</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link text-color" href="#">
+						<a class="nav-link text-color" href="https://twitter.com/Hikiuseless">
 							<i class="fa-brands fa-twitter"></i>
 						</a>
 					</li>
@@ -104,43 +82,41 @@
 			<div class="row min-vh-100 align-items-center">
 				<div class="col-md-6">
 					<div class="text-center mt-3 mt-md-0">
-						<img src="./Images/mypfp.jpg" class="rounded-circle shadow-lg" width="80%" height="80%">
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%"
+							id="blobSvg" filter="blur(0px)" style="opacity: 1;" transform="rotate(0)">
+							<image x="0" y="0" width="100%" height="100%" clip-path="url(#shape)"
+								href="./Images/mypfp.jpg" preserveAspectRatio="none"></image>
+							<defs>
+								<linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+									<stop offset="0%" style="stop-color: rgb(156, 151, 145);"></stop>
+									<stop offset="100%" style="stop-color: rgb(13, 228, 231);"></stop>
+								</linearGradient>
+							</defs>
+							<clipPath id="shape">
+								<path id="blob" fill="url(#gradient)">
+									<animate attributeName="d" dur="11000ms" repeatCount="indefinite"
+										values="M440.5,320.5Q418,391,355.5,442.5Q293,494,226,450.5Q159,407,99,367Q39,327,31.5,247.5Q24,168,89,125.5Q154,83,219.5,68Q285,53,335.5,94.5Q386,136,424.5,193Q463,250,440.5,320.5Z;M453.78747,319.98894Q416.97789,389.97789,353.96683,436.87838Q290.95577,483.77887,223.95577,447.43366Q156.95577,411.08845,105.64373,365.97789Q54.33169,320.86732,62.67444,252.61056Q71.01719,184.3538,113.01965,135.21007Q155.02211,86.06634,220.52211,66.46683Q286.02211,46.86732,335.5,91.94472Q384.97789,137.02211,437.78747,193.51106Q490.59704,250,453.78747,319.98894Z;M411.39826,313.90633Q402.59677,377.81265,342.92059,407.63957Q283.24442,437.46649,215.13648,432.5428Q147.02853,427.61911,82.23325,380.9572Q17.43796,334.29529,20.45223,250.83809Q23.46649,167.38089,82.5856,115.05707Q141.70471,62.73325,212.19045,63.73015Q282.67618,64.72705,352.67308,84.79839Q422.66998,104.86972,421.43486,177.43486Q420.19974,250,411.39826,313.90633Z;M440.5,320.5Q418,391,355.5,442.5Q293,494,226,450.5Q159,407,99,367Q39,327,31.5,247.5Q24,168,89,125.5Q154,83,219.5,68Q285,53,335.5,94.5Q386,136,424.5,193Q463,250,440.5,320.5Z;">
+									</animate>
+								</path>
+							</clipPath>
+						</svg>
 					</div>
 				</div>
 				<div class="col-md-6 order-md-first">
 					<div class="my-profile mt-3 mt-md-0">
-						<p class="mb-1 text-warning text-uppercase mb-2">Introduction</p>
+						<p class="mb-1 primary-color text-uppercase mb-2">Introduction</p>
 						<h4 class="text-color text-capitalize fw-bold">Hello I'm</h4>
 						<h1 class="text-color text-capitalize fs-1 fw-bolder">Khant Nyein Zaw</h1>
-						<div class="border border-3 border-start-0 border-end-0 border-top-0 border-warning my-2 w-25">
+						<div class="border border-dark border-3 border-start-0 border-end-0 border-top-0 my-2"
+							style="width: 60%;">
 						</div>
 						<h3 class="fw-bold mt-md-3">
-							UI UX Designer / Full Stack Web Developer
+							Full Stack Web Developer
 						</h3>
 						<p class="text-muted mt-md-3">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam minus animi ad iusto aut
-							commodi inventore minima mollitia recusandae culpa possimus ratione fuga illo saepe eius sit
-							omnis, in suscipit.
+							I'm highly passionate in making web applications using Vue Js and Laravel.
 						</p>
-						<ul class="list-group list-group-flush mb-3">
-							<li class="list-group-item list-group-item-action d-flex align-items-center">
-								<a href="#" target="_blank" class="text-muted text-decoration-none me-2">Instagram</a>
-								<i class="fa-brands fa-instagram"></i>
-							</li>
-							<li class="list-group-item list-group-item-action d-flex align-items-center">
-								<a href="#" class="text-muted text-decoration-none me-2">Linkedin</a>
-								<i class="fa-brands fa-linkedin"></i>
-							</li>
-							<li class="list-group-item list-group-item-action d-flex align-items-center">
-								<a href="#" class="text-muted text-decoration-none me-2">Behance</a>
-								<i class="fa-brands fa-behance"></i>
-							</li>
-							<li class="list-group-item list-group-item-action d-flex align-items-center">
-								<a href="#" class="text-muted text-decoration-none me-2">Dribble</a>
-								<i class="fa-brands fa-dribbble"></i>
-							</li>
-						</ul>
-						<a class="btn btn-outline-warning px-4" href="#">Contact Me</a>
+						<a class="btn btn-outline-dark px-4" href="#">Check Resume</a>
 					</div>
 				</div>
 			</div>
@@ -148,68 +124,90 @@
 	</section>
 	<!-- home section end -->
 
-	<!-- service section start -->
-	<section id="services">
-		<div class="container-lg mt-4 mt-md-0 text-capitalize">
+	<!-- About section start -->
+	<div id="about">
+		<div class="container-lg mt-3">
 			<div class="row justify-content-center mb-3">
 				<div class="title text-center">
-					<p class="mb-1 text-warning text-uppercase">Services</p>
+					<h2 class="fs-1 fw-bold text-color">About Me</h2>
+				</div>
+			</div>
+			<div class="row g-3">
+				<div class="col-md-6">
+					<div class="card text-bg-dark">
+						<div class="card-header">
+							<h5>High School Graduation</h5>
+						</div>
+						<div class="card-body">
+							<h6 class="card-title">Graduated at</h6>
+							<p class="text-muted">Basic Education High School NO.1 North Okkalapa, Yangon</p>
+							<p class="text-muted">I passed the matriculation exam with 2 flying colors in Physics and
+								Biology.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="card text-bg-dark">
+						<div class="card-header">
+							<h5>Academic Level</h5>
+						</div>
+						<div class="card-body">
+							<h6 class="card-title">Attended</h6>
+							<p class="text-muted">Technology University (Mhawbi).</p>
+							<p class="text-muted">
+								I specialized in Electrical Power
+								Engineering. I decided to quit the university due to political and personal issues.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- service section start -->
+	<section id="services" data-aos="zoom-in">
+		<div class="container-lg mt-4 mt-md-2 text-capitalize">
+			<div class="row justify-content-center mb-3">
+				<div class="title text-center">
+					<p class="mb-1 primary-color text-uppercase">Services</p>
 					<h2 class="fs-1 fw-bold text-color">What I am great at</h2>
 				</div>
 			</div>
 			<div class="row gap-3 gap-lg-0">
 				<div class="col-lg-6">
 					<div class="content text-center">
-						<h4 class="fw-bold text-warning">Freelancer</h4>
-						<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem
-							aliquam accusamus dignissimos unde ex.</p>
+						<h4 class="fw-bold primary-color">Available To Hire</h4>
+						<p class="text-muted">As a self-learned web developer, I intend to try as much as possible to go
+							a long way into
+							my career.</p>
 					</div>
 					<div class="row">
-						<div class="col-sm-4 pb-3">
+						<div class="col-sm-4 pb-3" data-aos="zoom-in-up" data-aos-duration="3000">
 							<div class="info shadow p-3 text-center">
 								<div class="logo text-center py-3">
 									<i class="fa-solid fa-pen-nib fa-3x"></i>
 								</div>
-								<h6 class="fw-bold">UI UX Design</h6>
-								<p class="text-muted">129 projects</p>
+								<h6 class="fw-bold">Vue</h6>
+								<p class="text-muted">3 projects</p>
 							</div>
 						</div>
-						<div class="col-sm-4 pb-3">
+						<div class="col-sm-4 pb-3" data-aos="zoom-in-up" data-aos-duration="3000">
 							<div class="info shadow p-3 text-center">
 								<div class="logo text-center py-3">
 									<i class="fa-solid fa-code fa-3x"></i>
 								</div>
-								<h6 class="fw-bold">Web Development</h6>
-								<p class="text-muted">221 projects</p>
+								<h6 class="fw-bold">Web Design</h6>
+								<p class="text-muted">3 projects</p>
 							</div>
 						</div>
-						<div class="col-sm-4 pb-3">
+						<div class="col-sm-4 pb-3" data-aos="zoom-in-up" data-aos-duration="3000">
 							<div class="info shadow p-3 text-center">
 								<div class="logo text-center py-3">
 									<i class="fa-solid fa-square-poll-vertical fa-3x"></i>
 								</div>
-								<h6 class="fw-bold">Marketing</h6>
-								<p class="text-muted">330 projects</p>
-							</div>
-						</div>
-					</div>
-					<div class="row pb-2">
-						<div class="col-4">
-							<div class="text-center mt-3">
-								<p class="text-warning fs-2 mb-0">9+</p>
-								<span class="text-muted">Years of experience</span>
-							</div>
-						</div>
-						<div class="col-4">
-							<div class="text-center mt-3">
-								<p class="text-warning fs-2 mb-0">200+</p>
-								<span class="text-muted">Satisfied customers</span>
-							</div>
-						</div>
-						<div class="col-4">
-							<div class="text-center mt-3">
-								<p class="text-warning fs-2 mb-0">769+</p>
-								<span class="text-muted">Design items</span>
+								<h6 class="fw-bold">Laravel</h6>
+								<p class="text-muted">3 projects</p>
 							</div>
 						</div>
 					</div>
@@ -219,28 +217,42 @@
 						<div class="skill mb-3">
 							<h6 class="fw-bold">HTML</h6>
 							<div class="progress" style="height: 15px;">
-								<div class="progress-bar bg-warning" role="progressbar" style="width: 90%;"
+								<div class="progress-bar bg-dark" role="progressbar" style="width: 90%;"
 									aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
 							</div>
 						</div>
 						<div class="skill mb-3">
 							<h6 class="fw-bold">CSS</h6>
 							<div class="progress" style="height: 15px;">
-								<div class="progress-bar bg-warning" role="progressbar" style="width: 80%;"
+								<div class="progress-bar bg-dark" role="progressbar" style="width: 75%;"
 									aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
 							</div>
 						</div>
 						<div class="skill mb-3">
 							<h6 class="fw-bold">Javascript</h6>
 							<div class="progress" style="height: 15px;">
-								<div class="progress-bar bg-warning" role="progressbar" style="width: 60%;"
+								<div class="progress-bar bg-dark" role="progressbar" style="width: 80%;"
 									aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
 							</div>
 						</div>
 						<div class="skill mb-3">
-							<h6 class="fw-bold">Bootstrap</h6>
+							<h6 class="fw-bold">MySQL</h6>
 							<div class="progress" style="height: 15px;">
-								<div class="progress-bar bg-warning" role="progressbar" style="width: 75%;"
+								<div class="progress-bar bg-dark" role="progressbar" style="width: 70%;"
+									aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+							</div>
+						</div>
+						<div class="skill mb-3">
+							<h6 class="fw-bold">PHP (Laravel)</h6>
+							<div class="progress" style="height: 15px;">
+								<div class="progress-bar bg-dark" role="progressbar" style="width: 75%;"
+									aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+							</div>
+						</div>
+						<div class="skill mb-3">
+							<h6 class="fw-bold">VueJS, VueX</h6>
+							<div class="progress" style="height: 15px;">
+								<div class="progress-bar bg-dark" role="progressbar" style="width: 75%;"
 									aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
 							</div>
 						</div>
@@ -252,96 +264,108 @@
 	<!-- service section end -->
 
 	<!-- portfolio section start -->
-	<section id="portfolio">
+	<section id="portfolio" data-aos="zoom-in">
 		<div class="container-lg mt-5">
 			<div class="row justify-content-center mb-3">
 				<div class="title text-center">
-					<p class="mb-1 text-warning text-uppercase">Portfolio</p>
+					<p class="mb-1 primary-color text-uppercase">Portfolio</p>
 					<h2 class="fs-1 fw-bold text-color">My Masterpiece Collection</h2>
 				</div>
 			</div>
 			<div class="row g-4">
 				<div class="col-md-6 col-lg-4">
-					<div class="card border-0 shadow">
+					<div class="card border-0 shadow" data-aos="zoom-in-up" data-aos-duration="3000">
 						<div class="card-img-top">
-							<img src="./Images/project_1.webp" alt="" class="w-100"
+							<img src="./Images/Palun - Dark Personal Portfolio Jekyll Template.jpg" alt="" class="w-100"
 								style="height: 250px;object-fit: cover;object-position: top;">
 						</div>
 						<div class="card-body">
 							<h5 class="card-title fw-semibold">
-								E-commerce
+								Pizza Order System (Point of sale app with Laravel)
 							</h5>
-							<a href="#" class="text-warning text-decoration-none">Live demo</a>
+							<a href="https://github.com/khantnyeinzaw30/pizza_order_system"
+								class="primary-color text-decoration-none">Github</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-4">
-					<div class="card border-0 shadow">
+					<div class="card border-0 shadow" data-aos="zoom-in-up" data-aos-duration="3000">
 						<div class="card-img-top">
-							<img src="./Images/project_2.jpg" alt="" class="w-100"
+							<img src="./Images/Screenshot (4).png" alt="" class="w-100"
 								style="height: 250px;object-fit: cover;object-position: top;">
 						</div>
 						<div class="card-body">
 							<h5 class="card-title fw-semibold">
-								Admin Dashboard
+								New articles app (Vue + news api)
 							</h5>
-							<a href="#" class="text-warning text-decoration-none">Live demo</a>
+							<a href="https://github.com/khantnyeinzaw30/news_articles_app"
+								class="primary-color text-decoration-none">Github</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-4">
-					<div class="card border-0 shadow">
+					<div class="card border-0 shadow" data-aos="zoom-in-up" data-aos-duration="3000">
 						<div class="card-img-top">
-							<img src="./Images/project_3.webp" alt="" class="w-100"
+							<img src="./Images/Screenshot (7).png" alt="" class="w-100"
 								style="height: 250px;object-fit: cover;object-position: top;">
 						</div>
 						<div class="card-body">
 							<h5 class="card-title fw-semibold">
-								Admin Dashboard
+								My Media App (Vue + Laravel + API)
 							</h5>
-							<a href="#" class="text-warning text-decoration-none">Live demo</a>
+							<a href="https://github.com/khantnyeinzaw30/my_media_app_client"
+								class="primary-color text-decoration-none">Client</a>
+							<span class="fw-bold"> | </span>
+							<a href="https://github.com/khantnyeinzaw30/my_media_app_admin"
+								class="primary-color text-decoration-none">Admin</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-4">
-					<div class="card border-0 shadow">
+					<div class="card border-0 shadow" data-aos="zoom-in-up" data-aos-duration="3000">
 						<div class="card-img-top">
-							<img src="./Images/project_4.png" alt="" class="w-100"
+							<img src="./Images/Screenshot (8).png" alt="" class="w-100"
 								style="height: 250px;object-fit: cover;object-position: top;">
 						</div>
 						<div class="card-body">
 							<h5 class="card-title fw-semibold">
-								Admin Dashboard
+								Task Management App (Vue + Laravel + API)
 							</h5>
-							<a href="#" class="text-warning text-decoration-none">Live demo</a>
+							<a href="https://github.com/khantnyeinzaw30/task-management-laravel"
+								class="primary-color text-decoration-none">Manager Side</a>
+							<span class="fw-bold"> | </span>
+							<a href="https://github.com/khantnyeinzaw30/task-management-vue"
+								class="primary-color text-decoration-none">Employee Side</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-4">
-					<div class="card border-0 shadow">
+					<div class="card border-0 shadow" data-aos="zoom-in-up" data-aos-duration="3000">
 						<div class="card-img-top">
-							<img src="./Images/Project_5.webp" alt="" class="w-100"
+							<img src="./Images/Screenshot (3).png" alt="" class="w-100"
 								style="height: 250px;object-fit: cover;object-position: top;">
 						</div>
 						<div class="card-body">
 							<h5 class="card-title fw-semibold">
-								Coffee Shop
+								Mini Blog App (Vue 3 + composition api + Json Server)
 							</h5>
-							<a href="#" class="text-warning text-decoration-none">Live demo</a>
+							<a href="https://github.com/khantnyeinzaw30/my-blog"
+								class="primary-color text-decoration-none">Github</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-4">
-					<div class="card border-0 shadow">
+					<div class="card border-0 shadow" data-aos="zoom-in-up" data-aos-duration="3000">
 						<div class="card-img-top">
-							<img src="./Images/project_6.webp" alt="" class="w-100"
+							<img src="./Images/Palun - Dark Personal Portfolio Jekyll Template.jpg" alt="" class="w-100"
 								style="height: 250px;object-fit: cover;object-position: center;">
 						</div>
 						<div class="card-body">
 							<h5 class="card-title fw-semibold">
-								E-commerce
+								Mini Calculator Project with Javascript
 							</h5>
-							<a href="#" class="text-warning text-decoration-none">Live demo</a>
+							<a href="https://github.com/khantnyeinzaw30/Projects/tree/main/Calculator"
+								class="primary-color text-decoration-none">Github</a>
 						</div>
 					</div>
 				</div>
@@ -350,131 +374,12 @@
 	</section>
 	<!-- portfolio section end -->
 
-	<!-- partner section start -->
-	<section id="partner">
-		<div class="container-lg mt-5">
-			<div class="row justify-content-center mb-3">
-				<div class="title text-center">
-					<p class="mb-1 text-warning text-uppercase">Partners</p>
-					<h2 class="fs-1 fw-bold text-color">Here's some partners I've worked with</h2>
-				</div>
-			</div>
-			<div class="row justify-content-center">
-				<div class="col-md-10 col-lg-8">
-					<div class="carousel slide carousel-fade" id="dev-carousel">
-						<div class="carousel-indicators">
-							<button type="button" data-bs-target="#dev-carousel" data-bs-slide-to="0"
-								class="active bg-warning" aria-current="true" aria-label="Slide 1"></button>
-							<button type="button" data-bs-target="#dev-carousel" data-bs-slide-to="1" class="bg-warning"
-								aria-label="Slide 2"></button>
-							<button type="button" data-bs-target="#dev-carousel" data-bs-slide-to="2" class="bg-warning"
-								aria-label="Slide 3"></button>
-						</div>
-						<div class="carousel-inner">
-							<div class="carousel-item active">
-								<div class="card text-bg-dark p-4 border-0 shadow">
-									<div class="row g-0 align-items-center">
-										<div class="col-sm-4">
-											<img src="./Images/pf1.jpg" class="img-thumbnail rounded-circle" alt="...">
-										</div>
-										<div class="col-sm-8">
-											<div class="card-body">
-												<h3 class="card-title fw-semibold">John Doe</h3>
-												<p class="card-text fs-5">Senior Web Developer</p>
-												<p class="card-text">
-													<small class="text-muted">
-														Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-														quidem tenetur dolor quos, velit cum eum voluptas nam accusamus
-														itaque quibusdam a ad molestiae tempore, dolore, explicabo
-														possimus. Cum, dolorum.
-													</small>
-												</p>
-												<div class="text-warning mb-3 mb-sm-1">
-													<i class="fa-solid fa-star"></i>
-													<i class="fa-solid fa-star"></i>
-													<i class="fa-solid fa-star"></i>
-													<i class="fa-solid fa-star"></i>
-													<i class="fa-solid fa-star"></i>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="carousel-item">
-								<div class="card text-bg-dark p-4 border-0 shadow">
-									<div class="row g-0 align-items-center">
-										<div class="col-sm-4">
-											<img src="./Images/pf2.jpg" class="img-thumbnail rounded-circle" alt="...">
-										</div>
-										<div class="col-sm-8">
-											<div class="card-body">
-												<h3 class="card-title fw-semibold">Nora</h3>
-												<p class="card-text fs-5">UI UX Designer</p>
-												<p class="card-text">
-													<small class="text-muted">
-														Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos
-														similique aliquid cum delectus nulla consequuntur doloremque
-														dolore et aperiam quia inventore a nisi odio voluptatum
-														molestias, atque optio officiis minima!
-													</small>
-												</p>
-												<div class="text-warning mb-3 mb-sm-1">
-													<i class="fa-solid fa-star"></i>
-													<i class="fa-solid fa-star"></i>
-													<i class="fa-solid fa-star"></i>
-													<i class="fa-solid fa-star-half-stroke"></i>
-													<i class="fa-regular fa-star"></i>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="carousel-item">
-								<div class="card text-bg-dark p-4 border-0 shadow">
-									<div class="row g-0 align-items-center">
-										<div class="col-sm-4">
-											<img src="./Images/pf3.png" class="img-thumbnail rounded-circle" alt="...">
-										</div>
-										<div class="col-sm-8">
-											<div class="card-body">
-												<h3 class="card-title fw-semibold">Alex</h3>
-												<p class="card-text fs-5">Senior Software Engineer</p>
-												<p class="card-text">
-													<small class="text-muted">
-														Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero in
-														provident illum ipsum quibusdam eos asperiores, laudantium
-														inventore nulla ducimus voluptatibus suscipit. Sunt provident
-														laboriosam sequi.
-													</small>
-												</p>
-												<div class="text-warning mb-3 mb-sm-1">
-													<i class="fa-solid fa-star"></i>
-													<i class="fa-solid fa-star"></i>
-													<i class="fa-solid fa-star"></i>
-													<i class="fa-solid fa-star"></i>
-													<i class="fa-regular fa-star"></i>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- partner section end -->
-
 	<!-- contact section start -->
 	<section id="contact" class="mx-5">
 		<div class="container-lg mt-5">
 			<div class="row mb-3 justify-content-center">
 				<div class="col-sm-8 title text-center">
-					<p class="mb-1 text-warning text-uppercase">Contact us</p>
+					<p class="mb-1 primary-color text-uppercase">Contact us</p>
 					<h2 class="fs-1 fw-bold text-color text-capitalize">Ways to contact me</h2>
 					<p>
 						<small class="text-muted">
@@ -516,7 +421,7 @@
 								</div>
 								<div class="col-md-12">
 									<div class="form-button">
-										<button class="btn btn-outline-warning">Send</button>
+										<button class="btn btn-outline-dark">Send</button>
 									</div>
 								</div>
 							</div>
@@ -528,19 +433,13 @@
 						<div class="icon">
 							<i class="fa-solid fa-phone-flip"></i>
 						</div>
-						<p class="text-warning mb-0">+95 989739626</p>
+						<p class="primary-color mb-0">09989739626</p>
 					</div>
 					<div class="contact bg-light mb-3 p-3 d-flex justify-content-center gap-3">
 						<div class="icon">
 							<i class="fa-regular fa-envelope"></i>
 						</div>
-						<p class="text-warning mb-0">admin@jkh.com</p>
-					</div>
-					<div class="contact bg-light mb-3 p-3 d-flex justify-content-center gap-3">
-						<div class="icon">
-							<i class="fa-brands fa-dribbble"></i>
-						</div>
-						<p class="text-warning mb-0">Tortoiz</p>
+						<p class="primary-color mb-0">khantnyeinzaw6@gmail.com</p>
 					</div>
 				</div>
 			</div>
@@ -549,7 +448,7 @@
 	<!-- contact section end -->
 
 	<!-- footer start -->
-	<footer class="text-bg-warning">
+	<footer class="text-bg-dark">
 		<div class="container-lg py-3">
 			<div class="row justify-content-center">
 				<div class="col-sm-8">
@@ -564,6 +463,11 @@
 
 	<!-- cdn link of bootstrap js bundle with popper -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- animate on scroll js link -->
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
 </body>
 
 </html>
