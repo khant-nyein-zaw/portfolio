@@ -32,6 +32,12 @@
     color: #7d7dd8 !important;
 }
 
+.avater {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
 /* 
 #services {
     position: relative;
